@@ -1,0 +1,69 @@
+\documentclass{article}
+
+%\usepackage{utf8x}{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[noshuffle,box,insidebox]{automultiplechoice}
+\usepackage{multicol}
+
+% Set geometry for the page (makes margins smaller and so forth.)
+\geometry{letterpaper,hmargin=1.5cm,headheight=.75cm,headsep=.3cm,footskip=0cm,top=3cm,bottom=2cm}
+
+\begin{document}
+	
+%\onecopy{48}{ %Temporarily disabled for document build process
+\onecopy{1}{
+
+% Setting AMC variables:
+\AMCnumericOpts{,reverse=false,scoring=false,sign=false,strict=false,vertical=true,hspace=.25em,vspace=.25em}
+\def\AMCbeginQuestion{}
+\AMCcodeHspace=.25em
+\AMCcodeVspace=.25em
+
+
+% Beginning of header
+
+\begin{center} 2013 Scouting Sheet --- \textsc{CrowdScout} \end{center}
+
+\vspace*{-.7cm}
+
+\begin{center}\large Wisconsin Regional March 21\textsuperscript{st} - March 23\textsuperscript{rd}\end{center}
+
+\noindent\begin{minipage}{.75\linewidth}
+Please complete in a black or dark blue pen so the computer can read the document. Be sure to fill in the boxes completely, as you would on a scantron test; furthermore, for the computer to read the sheet, please don't mark near the 4 calibration circles or the identification boxes at the top of the page. Zeros \emph{must} be filled for the computer to recognize them as such. Note that the document may only be glanced at by humans, so if something needs to be communicated, please alert Team 1306's scouting department.
+\end{minipage}
+\hspace*{.01\linewidth}
+\fbox{
+	\begin{minipage}{.2\linewidth}
+Your team number: \\[3.25em]
+ 	\vspace*{1mm}\dotfill % Check why this isn't working...
+	\vspace*{1mm}
+	\end{minipage}
+	}
+
+\vspace*{1em}
+% End of header
+
+\noindent\begin{minipage}{.15\linewidth}
+	\begin{center}
+		\textbf{Team Number:} \\[1em]
+		\fbox{\AMCcode{teamnumber}{4}}
+	\end{center}
+\end{minipage}
+\begin{minipage}{.17\linewidth}
+	\begin{center}
+		\textbf{Round Number:} \\[1em]
+		\fbox{\AMCcode{roundnumber}{2}}
+	\end{center}
+\end{minipage}
+\begin{minipage}{.18\linewidth}
+	\begin{center}
+		\textbf{Offensive Points:} \\[1em]
+		\fbox{\AMCcode{offensivepts}{2}}
+	\end{center}
+\end{minipage}
+
+
+}	
+	
+\end{document}
