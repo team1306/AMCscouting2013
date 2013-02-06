@@ -26,19 +26,27 @@ AUTOQCM[NUM=6=roundnumber.1]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=7=shootingpts.2]
+AUTOQCM[NUM=7=autopoints.2]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=8=shootingpts.1]
+AUTOQCM[NUM=8=autopoints.1]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=9=climberpts.2]
+AUTOQCM[NUM=9=shootingpts.2]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=10=climberpts.1]
+AUTOQCM[NUM=10=shootingpts.1]
+
+AUTOQCM[FQ]
+
+AUTOQCM[NUM=11=climbingpts]
+
+AUTOQCM[FQ]
+
+AUTOQCM[NUM=12=dumperpts]
 
 AUTOQCM[FQ]
 

@@ -2,7 +2,7 @@
 <projetAMC>
   <_modifie></_modifie>
   <_modifie_ok>1</_modifie_ok>
-  <after_export>file</after_export>
+  <after_export></after_export>
   <allocate_ids></allocate_ids>
   <annote_position>marge</annote_position>
   <annote_rtl></annote_rtl>
