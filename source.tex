@@ -3,13 +3,15 @@
 %\usepackage{utf8x}{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage[noshuffle,box,insidebox,digits]{automultiplechoice}
+\usepackage[noshuffle,box,insidebox]{automultiplechoice}
 \usepackage{multicol,textcomp}
 
 % Set geometry for the page (makes margins smaller and so forth.)
 \geometry{letterpaper,hmargin=1.5cm,headheight=.75cm,headsep=.3cm,footskip=0cm,top=3cm,bottom=2cm}
 
 \def\AMCbeginQuestion#1#2{\noindent{\bf \textnumero \, #1}: }
+
+\newcommand{\ccs}[2]{\correctchoice{#1}\scoring{b=#2}}
 
 \begin{document}
 	
@@ -24,90 +26,163 @@
 
 % Beginning of header
 
-\begin{center} 2013 Scouting Sheet --- \textsc{CrowdScout} \end{center}
+\begin{center} \texttt{2013 Scouting Sheet by Team 1306} \end{center}
 
 \vspace*{-.7cm}
 
 \begin{center}\large Wisconsin Regional March 21\textsuperscript{st} - March 23\textsuperscript{rd}\end{center}
 
 \noindent\begin{minipage}{.75\linewidth}
-Please complete in a black or dark blue pen so the computer can read the document. Be sure to fill in the boxes completely, as you would on a scantron test; furthermore, for the computer to read the sheet, please don't mark near the 4 calibration circles or the identification boxes at the top of the page. Zeros \emph{must} be filled for the computer to recognize them as such. Note that the document may only be glanced at by humans, so if something needs to be communicated, please alert Team 1306's scouting department.
+Please complete in a black or dark blue pen so the computer can read the document. Be sure to fill in the boxes completely, as you would on a scantron test; furthermore, for the computer to read the sheet, please don't mark near the 4 calibration circles or the identification boxes at the top of the page. Zeros \emph{must} be filled for the computer to recognize them as such. Note that the document may only be glanced at by humans, so if something needs to be communicated, please alert the scouting department.
 \end{minipage}
-\hspace*{.01\linewidth}
+\hfill
 \fbox{
 	\begin{minipage}{.2\linewidth}
-Your team number: \\[3.5em]
+Your name: \\[3.5em]
  	\vspace*{1mm}\dotfill
 	\vspace*{1mm}
 	\end{minipage}
 	}
-\vspace*{1em}
+\vspace*{.75em}
 % End of header
 
 \noindent\begin{minipage}{.15\linewidth}
 	\begin{center}
-		\textbf{Team Number: \linebreak} \\[1em]
+		\textbf{Team Number:} \\[1em]
 		\fbox{\AMCcode{teamnumber}{4}}
 	\end{center}
 \end{minipage}
 \begin{minipage}{.17\linewidth} % Regional usually has less than 100 rounds
 	\begin{center}
-		\textbf{Round Number: \linebreak} \\[1em]
+		\textbf{Round Number:} \\[1em]
 		\fbox{\AMCcode{roundnumber}{2}}
 	\end{center}
 \end{minipage}
-\begin{minipage}{.2\linewidth}
-	\begin{center}
-		\textbf{Autonomous Points: \linebreak} \\[1em]
-		\fbox{\AMCcode{autopoints}{2}}
-	\end{center}
-\end{minipage}
-\begin{minipage}{.2\linewidth} % I don't forsee >100 points by shooting.
-	\begin{center}
-		\textbf{(non-autonomous) \linebreak Shooter Points:} \\[1em]
-		\fbox{\AMCcode{shootingpts}{2}}
-	\end{center}
-\end{minipage}
-\\[2em]
-
-\noindent\begin{minipage}{.2\linewidth} % Intended to prevent impossible climbing point totals.
+\hspace*{2em}
+\begin{minipage}{.6\linewidth}
+\begin{multicols}{2}
+\begin{minipage}{\linewidth} % Climbing Level
 	\begin{question}{climbingpts}\QuestionIndicative
-		Climbing Points:
-		\begin{multicols}{2}
-			\begin{choices}
-				\correctchoice{0}
-				\correctchoice{10}
-				\correctchoice{20}
-				\correctchoice{30}
-			\end{choices}
-		\end{multicols}
-	\end{question}
-\end{minipage}
-\\ % Temporarily dropped to two lines while working on spacing issues (the questions should be horizontally placed but aligned vertically.)
-\begin{minipage}{.2\linewidth}
-	\begin{question}{dumperpts}\QuestionIndicative
-		Frisbees Dumped:
+		Climbing Level: \\
+		(0 means floor)
 		\begin{multicols}{2}\AMCBoxedAnswers
-			\begin{choices} % Seven options is inconvenient.
-				\correctchoice{0}
-				\correctchoice{1}
-				\correctchoice{2}
-				\correctchoice{3}
-				\correctchoice{4}
-				\correctchoice{5}
-				\correctchoice{6}
+			\begin{choices}
+				\ccs{0 (floor)}{0}
+				\ccs{1}{10}
+				\ccs{2}{20}
+				\ccs{3}{30}
 			\end{choices}
 		\end{multicols}
 	\end{question}
 \end{minipage}
+\\
+\begin{minipage}{\linewidth} % Pyramid Goal Frisbees
+	\begin{question}{pyramid}\QuestionIndicative
+		Pyramid Goal Frisbees: \\
+		\begin{multicols}{3}\AMCBoxedAnswers
+			\begin{choices}
+				\ccs{0}{0}
+				\ccs{1}{1}
+				\ccs{2}{2}
+				\ccs{3}{3}
+				\ccs{4}{4}
+				\ccs{5}{5}
+				\ccs{6}{6}
+			\end{choices}
+		\end{multicols}
+	\end{question}
+\end{minipage}
+\\
+\begin{minipage}{\linewidth} % Defense Effectiveness
+	\begin{question}{defense}\QuestionIndicative
+		Defense Effectiveness: \\
+		(0 means not exhibited)
+		\begin{multicols}{3}\AMCBoxedAnswers
+			\begin{choices}
+				\ccs{0}{na}
+				\ccs{1}{1}
+				\ccs{2}{2}
+				\ccs{3}{3}
+				\ccs{4}{4}
+				\ccs{5}{5}
+			\end{choices}
+		\end{multicols}
+	\end{question}
+\end{minipage}
+\\
+\begin{minipage}{\linewidth} % Driver Quality
+	\begin{question}{driver}\QuestionIndicative
+		Driver Quality: \\
+		(0 means fancybot)
+		\begin{multicols}{3}\AMCBoxedAnswers
+			\begin{choices}
+				\ccs{0}{na}
+				\ccs{1}{1}
+				\ccs{2}{2}
+				\ccs{3}{3}
+				\ccs{4}{4}
+				\ccs{5}{5}
+			\end{choices}
+		\end{multicols}
+	\end{question}
+\end{minipage}
+\end{multicols}
+\end{minipage}
+
+\begin{center} % Notes field
+\fbox{
+	\begin{minipage}{.95\linewidth}
+		Notes: \\[2em]
+	\end{minipage}
+}
+\end{center}
+
+\noindent\begin{minipage}{.13\linewidth} % Autonomous High Goals
+	\begin{center}
+		\textbf{Autonomous \linebreak High Goals:} \\[1em]
+		\fbox{\AMCcode{autohighgoals}{2}}
+	\end{center}
+\end{minipage}
+\begin{minipage}{.15\linewidth} % Autonomous Medium Goals
+	\begin{center}
+		\textbf{Autonomous \linebreak Medium Goals:} \\[1em]
+		\fbox{\AMCcode{automedgoals}{2}}
+	\end{center}
+\end{minipage}
+\begin{minipage}{.13\linewidth} % Autonomous Low Goals
+	\begin{center}
+		\textbf{Autonomous \linebreak Low Goals:} \\[1em]
+		\fbox{\AMCcode{autolowgoals}{2}}
+	\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{.13\linewidth} % Teleoperated High Goals
+	\begin{center}
+		\textbf{Teleoperated \linebreak High Goals:} \\[1em]
+		\fbox{\AMCcode{telehighgoals}{2}}
+	\end{center}
+\end{minipage}
+\begin{minipage}{.15\linewidth} % Teleoperated Medium Goals
+	\begin{center}
+		\textbf{Teleoperated \linebreak Medium Goals:} \\[1em]
+		\fbox{\AMCcode{telemedgoals}{2}}
+	\end{center}
+\end{minipage}
+\begin{minipage}{.13\linewidth} % Teleoperated Low Goals
+	\begin{center}
+		\textbf{Teleoperated \linebreak Low Goals:} \\[1em]
+		\fbox{\AMCcode{telelowgoals}{2}}
+	\end{center}
+\end{minipage}
+\\[1em]
 
 \vfill
 
 \begin{center}
-\noindent\namefield{
+\namefield{
 	\fbox{
 		\begin{minipage}{.95\linewidth}
-			Comments: \\[7em]
+			Comments: \\[5em]
 		\end{minipage}
 	}
 }
