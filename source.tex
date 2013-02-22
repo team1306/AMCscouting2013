@@ -12,6 +12,7 @@
 \def\AMCbeginQuestion#1#2{\noindent{\bf \textnumero \, #1}: }
 
 \newcommand{\ccs}[2]{\correctchoice{#1}\scoring{b=#2}}
+\newcommand{\nextcolumn}{\vfill\columnbreak}
 
 \begin{document}
 	
@@ -61,71 +62,71 @@ Your name: \\[3.5em]
 \hspace*{2em}
 \begin{minipage}{.6\linewidth}
 \begin{multicols}{2}
-\begin{minipage}{\linewidth} % Climbing Level
+\fbox{\begin{minipage}{\linewidth} % Climbing Level
 	\begin{question}{climbingpts}\QuestionIndicative
 		Climbing Level: \\
 		(0 means floor)
 		\begin{multicols}{2}\AMCBoxedAnswers
 			\begin{choices}
 				\ccs{0 (floor)}{0}
-				\ccs{1}{10}
+				\ccs{1}{10} \nextcolumn
 				\ccs{2}{20}
 				\ccs{3}{30}
 			\end{choices}
 		\end{multicols}
 	\end{question}
-\end{minipage}
-\\
-\begin{minipage}{\linewidth} % Pyramid Goal Frisbees
+\end{minipage}}
+\\[.25em]
+\fbox{\begin{minipage}{\linewidth} % Pyramid Goal Frisbees
 	\begin{question}{pyramid}\QuestionIndicative
 		Pyramid Goal Frisbees: \\
 		\begin{multicols}{3}\AMCBoxedAnswers
 			\begin{choices}
 				\ccs{0}{0}
 				\ccs{1}{1}
-				\ccs{2}{2}
+				\ccs{2}{2} \nextcolumn
 				\ccs{3}{3}
 				\ccs{4}{4}
-				\ccs{5}{5}
+				\ccs{5}{5} \nextcolumn
 				\ccs{6}{6}
 			\end{choices}
 		\end{multicols}
 	\end{question}
-\end{minipage}
+\end{minipage}}
 \\
-\begin{minipage}{\linewidth} % Defense Effectiveness
+\fbox{\begin{minipage}{\linewidth} % Defense Effectiveness
 	\begin{question}{defense}\QuestionIndicative
 		Defense Effectiveness: \\
 		(0 means not exhibited)
 		\begin{multicols}{3}\AMCBoxedAnswers
 			\begin{choices}
 				\ccs{0}{na}
-				\ccs{1}{1}
+				\ccs{1}{1} \nextcolumn
 				\ccs{2}{2}
-				\ccs{3}{3}
+				\ccs{3}{3} \nextcolumn
 				\ccs{4}{4}
 				\ccs{5}{5}
 			\end{choices}
 		\end{multicols}
 	\end{question}
-\end{minipage}
-\\
-\begin{minipage}{\linewidth} % Driver Quality
+\end{minipage}}
+\\[.25em]
+\fbox{\begin{minipage}{\linewidth} % Driver Quality
 	\begin{question}{driver}\QuestionIndicative
 		Driver Quality: \\
 		(0 means fancybot)
 		\begin{multicols}{3}\AMCBoxedAnswers
 			\begin{choices}
 				\ccs{0}{na}
-				\ccs{1}{1}
+				\ccs{1}{1} \nextcolumn
 				\ccs{2}{2}
-				\ccs{3}{3}
+				\ccs{3}{3} \nextcolumn
 				\ccs{4}{4}
 				\ccs{5}{5}
 			\end{choices}
 		\end{multicols}
 	\end{question}
-\end{minipage}
+\end{minipage}}
 \end{multicols}
 \end{minipage}
 
