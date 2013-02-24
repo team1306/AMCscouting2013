@@ -1,29 +1,29 @@
 \documentclass{article}
 
-%\usepackage{utf8x}{inputenc}
+% Set input and font encodings
+\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 
+%Options for AMC and adding some packages I use
 \usepackage[noshuffle,box,insidebox]{automultiplechoice}
 \usepackage{multicol,textcomp}
 
 % Set geometry for the page (makes margins smaller and so forth.)
-\geometry{letterpaper,hmargin=1.5cm,headheight=.75cm,headsep=.3cm,footskip=0cm,top=3cm,bottom=2cm}
+\geometry{letterpaper,hmargin=1.5cm,headheight=.75cm,headsep=.3cm,footskip=0cm,top=2cm,bottom=2cm}
 
+% Setting up AMC formatting
 \def\AMCbeginQuestion#1#2{\noindent{\bf \textnumero \, #1}: }
-
-\newcommand{\ccs}[2]{\correctchoice{#1}\scoring{b=#2}}
-\newcommand{\nextcolumn}{\vfill\columnbreak}
-
-\begin{document}
-	
-%\onecopy{48}{ %Temporarily disabled for document build process
-\onecopy{1}{
-
-% Setting AMC variables:
-% \def\AMCbeginQuestion#1#2{\par\noindent{\bf Question #1}}
 \AMCcodeHspace=.25em
 \AMCcodeVspace=.25em
 
+% Custom commands to make this document easier to read and write
+\newcommand{\ccs}[2]{\correctchoice{#1}\scoring{b=#2}} % Shortens adding a choice and setting its score value.
+\newcommand{\nextcolumn}{\vfill\columnbreak} % A bit of a silly command, but I find it more readable - it goes to the next column in a multicols environment.
+
+\begin{document}
+	
+%\onecopy{6}{ %Temporarily disabled for document build process
+\onecopy{1}{
 
 % Beginning of header
 
@@ -47,19 +47,21 @@ Your name: \\[3.5em]
 \vspace*{.75em}
 % End of header
 
+% Robot identification
 \noindent\begin{minipage}{.15\linewidth}
 	\begin{center}
 		\textbf{Team Number:} \\[1em]
 		\fbox{\AMCcode{teamnumber}{4}}
 	\end{center}
 \end{minipage}
-\begin{minipage}{.17\linewidth} % Regional usually has less than 100 rounds
+\begin{minipage}{.17\linewidth}
 	\begin{center}
 		\textbf{Round Number:} \\[1em]
 		\fbox{\AMCcode{roundnumber}{2}}
 	\end{center}
 \end{minipage}
 \hspace*{2em}
+% Unfortunately a bit of a mess, but climbing and subjective evaluations.
 \begin{minipage}{.6\linewidth}
 \begin{multicols}{2}
 \fbox{\begin{minipage}{\linewidth} % Climbing Level
@@ -130,14 +132,16 @@ Your name: \\[3.5em]
 \end{multicols}
 \end{minipage}
 
-\begin{center} % Notes field
+% Notes field
+\begin{center}
 \fbox{
 	\begin{minipage}{.95\linewidth}
-		Notes: \\[2em]
+		Notes: \\[3em]
 	\end{minipage}
 }
 \end{center}
 
+% Boxes for frisbee goals
 \noindent\begin{minipage}{.13\linewidth} % Autonomous High Goals
 	\begin{center}
 		\textbf{Autonomous \linebreak High Goals:} \\[1em]
@@ -183,7 +187,7 @@ Your name: \\[3.5em]
 \namefield{
 	\fbox{
 		\begin{minipage}{.95\linewidth}
-			Comments: \\[5em]
+			Comments: \\[7em]
 		\end{minipage}
 	}
 }
