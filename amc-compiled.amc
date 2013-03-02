@@ -42,51 +42,39 @@ AUTOQCM[NUM=10=driver]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=11=autohighgoals.2]
+AUTOQCM[NUM=11=autohighgoals.1]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=12=autohighgoals.1]
+AUTOQCM[NUM=12=automedgoals.1]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=13=automedgoals.2]
+AUTOQCM[NUM=13=autolowgoals.1]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=14=automedgoals.1]
+AUTOQCM[NUM=14=telehighgoals.2]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=15=autolowgoals.2]
+AUTOQCM[NUM=15=telehighgoals.1]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=16=autolowgoals.1]
+AUTOQCM[NUM=16=telemedgoals.2]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=17=telehighgoals.2]
+AUTOQCM[NUM=17=telemedgoals.1]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=18=telehighgoals.1]
+AUTOQCM[NUM=18=telelowgoals.2]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=19=telemedgoals.2]
-
-AUTOQCM[FQ]
-
-AUTOQCM[NUM=20=telemedgoals.1]
-
-AUTOQCM[FQ]
-
-AUTOQCM[NUM=21=telelowgoals.2]
-
-AUTOQCM[FQ]
-
-AUTOQCM[NUM=22=telelowgoals.1]
+AUTOQCM[NUM=19=telelowgoals.1]
 
 AUTOQCM[FQ]
 
